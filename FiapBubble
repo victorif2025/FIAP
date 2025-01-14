@@ -19,3 +19,7 @@ while fim > 1:
 # Exibir a lista ordenada
 for elemento in L:
     print(elemento)
+
+
+
+    

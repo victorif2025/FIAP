@@ -1,6 +1,5 @@
 # criação da lista
 L = [  ]
-
 # Adicionar novos itens à lista
 while True:
     try:
