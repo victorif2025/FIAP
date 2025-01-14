@@ -1,0 +1,32 @@
+# criação da lista
+L = [  ]
+
+# Adicionar novos itens à lista
+while True:
+    try:
+        novo_item = input("Digite um número para adicionar à lista (ou pressione Enter para parar): ")
+        if novo_item == "":
+            break  # Sai do loop se o usuário pressionar Enter
+        L.append(int(novo_item))  # Adiciona o número convertido para inteiro
+    except ValueError:
+        print("Entrada inválida! Digite apenas números inteiros.")
+
+# Tamanho da lista
+fim = len(L)
+
+# Algoritmo Bubble Sort
+while fim > 1:
+    trocou = False  # Flag para verificar se houve troca
+    for i in range(fim - 1):
+        if L[i] > L[i + 1]:
+            # Troca os elementos se estiverem fora de ordem
+            L[i], L[i + 1] = L[i + 1], L[i]
+            trocou = True  # Marca que houve troca
+    if not trocou:
+        break  # Se não houve troca, a lista já está ordenada
+    fim -= 1  # Reduz o limite da comparação
+
+# Exibir a lista ordenada
+print("\nLista ordenada:")
+for elemento in L:
+    print(elemento)
