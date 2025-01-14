@@ -1,0 +1,21 @@
+# Lista de números
+L = [15, 7, 1]
+
+# Tamanho da lista
+fim = len(L)
+
+# Algoritmo Bubble Sort
+while fim > 1:
+    trocou = False  # Flag para verificar se houve troca
+    for i in range(fim - 1):
+        if L[i] > L[i + 1]:
+            # Troca os elementos se estiverem fora de ordem
+            L[i], L[i + 1] = L[i + 1], L[i]
+            trocou = True  # Marca que houve troca
+    if not trocou:
+        break  # Se não houve troca, a lista já está ordenada
+    fim -= 1  # Reduz o limite da comparação
+
+# Exibir a lista ordenada
+for elemento in L:
+    print(elemento)
